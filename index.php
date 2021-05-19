@@ -1,6 +1,6 @@
 <?php 
     $domande = [
-        'Clausole' => [
+        'Clausole' => 
             "La Commissione europea ha approvato l'utilizzo di clausole 
             contrattuali tipo come mezzo per assicurare un livello adeguato di protezione 
             dei dati trasferiti all'esterno dello Spazio economico europeo. 
@@ -10,9 +10,9 @@
             o del Regno Unito a cui non si applica una decisione in materia di adeguatezza
             Ci basiamo su queste clausole contrattuali tipo per i trasferimenti di dati.
             Google predispone queste clausole contrattuali tipo anche per tutti i clienti dei suoi servizi per aziende, tra cui Google Workspace, Google Cloud Platform, Google Ads e altri prodotti pubblicitari e di misurazione. I dettagli sull'utilizzo delle clausole contrattuali tipo da parte di Google sono disponibili all'indirizzo privacy.google.com/businesses."
-        ],
+        ,
 
-        "Disposizioni dell'EU-U.S. Privacy Shield" => [
+        "Disposizioni dell'EU-U.S. Privacy Shield" => 
             "Come descritto nella nostra certificazione Privacy 
             Shield (scudo per la privacy), rispettiamo gli Accordi EU-U.S. Privacy
             Shield (scudo UE-USA per la privacy) e Swiss-U.S. Privacy Shield 
@@ -48,11 +48,11 @@
             Dal 16 luglio 2020 non ci basiamo più sull'EU-U.S. Privacy 
             Shield (scudo UE-USA per la privacy) per trasferire dati dallo
             Spazio economico europeo e dal Regno Unito negli Stati Uniti."
-        ],
+        ,
         
-        'Comunicazione informazioni' => [
+        'Comunicazione informazioni' => 
             "Utilizziamo le informazioni che raccogliamo, come ad esempio l'indirizzo email, per interagire direttamente con te. Ad esempio, potremmo mandarti una notifica qualora rilevassimo attività sospette, ad esempio un tentativo di accedere al tuo account Google da una posizione insolita. Oppure potremmo informarti circa le modifiche o i miglioramenti imminenti riguardanti i nostri servizi. Se contatti Google, terremo una registrazione della tua richiesta per aiutarti a risolvere eventuali problemi che potrebbero sorgere."
-        ]
+        
     ];
 
     
@@ -99,26 +99,20 @@
     <main>
         <div class="testo">
             
-                <?php foreach($domande as $titolo => $value) { ?> 
+        <?php foreach($domande as $titolo => $testo) { ?> 
 
-                    <h3> <?php echo $titolo; ?> </h3>
+            <h3> <?php echo $titolo; ?> </h3>
 
-                    <?php if ($titolo == 'Clausole') {
+            <p>
+                <?php echo $testo ?>
+            </p>
 
-                        foreach($titolo as $testo) { 
+        <?php } ?>
 
-                            echo '<div>' . $testo . '</div>';
-                        } 
 
-                    }?>
 
-                    
 
-                    
 
-                <?php } ?>
-
-        </div>
     </main>
     <!--FINE MAIN-->
 

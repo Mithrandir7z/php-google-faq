@@ -1,7 +1,7 @@
 <?php 
     $domande = [
-        [
-            'clausole' => "La Commissione europea ha approvato l'utilizzo di clausole 
+        'Clausole' => [
+            "La Commissione europea ha approvato l'utilizzo di clausole 
             contrattuali tipo come mezzo per assicurare un livello adeguato di protezione 
             dei dati trasferiti all'esterno dello Spazio economico europeo. 
             Incorporando le clausole contrattuali tipo in un contratto stipulato fra 
@@ -11,8 +11,9 @@
             Ci basiamo su queste clausole contrattuali tipo per i trasferimenti di dati.
             Google predispone queste clausole contrattuali tipo anche per tutti i clienti dei suoi servizi per aziende, tra cui Google Workspace, Google Cloud Platform, Google Ads e altri prodotti pubblicitari e di misurazione. I dettagli sull'utilizzo delle clausole contrattuali tipo da parte di Google sono disponibili all'indirizzo privacy.google.com/businesses."
         ],
-        [
-            'disposizioniEu' => "Come descritto nella nostra certificazione Privacy 
+
+        "Disposizioni dell'EU-U.S. Privacy Shield" => [
+            "Come descritto nella nostra certificazione Privacy 
             Shield (scudo per la privacy), rispettiamo gli Accordi EU-U.S. Privacy
             Shield (scudo UE-USA per la privacy) e Swiss-U.S. Privacy Shield 
             (scudo Svizzera-USA per la privacy), come stabilito dal Dipartimento 
@@ -48,10 +49,13 @@
             Shield (scudo UE-USA per la privacy) per trasferire dati dallo
             Spazio economico europeo e dal Regno Unito negli Stati Uniti."
         ],
-        [
-            'comunicare' => "Utilizziamo le informazioni che raccogliamo, come ad esempio l'indirizzo email, per interagire direttamente con te. Ad esempio, potremmo mandarti una notifica qualora rilevassimo attività sospette, ad esempio un tentativo di accedere al tuo account Google da una posizione insolita. Oppure potremmo informarti circa le modifiche o i miglioramenti imminenti riguardanti i nostri servizi. Se contatti Google, terremo una registrazione della tua richiesta per aiutarti a risolvere eventuali problemi che potrebbero sorgere."
+        
+        'Comunicazione informazioni' => [
+            "Utilizziamo le informazioni che raccogliamo, come ad esempio l'indirizzo email, per interagire direttamente con te. Ad esempio, potremmo mandarti una notifica qualora rilevassimo attività sospette, ad esempio un tentativo di accedere al tuo account Google da una posizione insolita. Oppure potremmo informarti circa le modifiche o i miglioramenti imminenti riguardanti i nostri servizi. Se contatti Google, terremo una registrazione della tua richiesta per aiutarti a risolvere eventuali problemi che potrebbero sorgere."
         ]
     ];
+
+    
 ?>
 
 
@@ -94,15 +98,26 @@
     <!--INIZIO MAIN-->
     <main>
         <div class="testo">
-            <ul>
-                <?php foreach($domande as $key as $value) { <?> 
+            
+                <?php foreach($domande as $titolo => $value) { ?> 
 
-                    <li> <?php  ?> </li>
+                    <h3> <?php echo $titolo; ?> </h3>
+
+                    <?php if ($titolo == 'Clausole') {
+
+                        foreach($titolo as $testo) { 
+
+                            echo '<div>' . $testo . '</div>';
+                        } 
+
+                    }?>
+
+                    
+
+                    
 
                 <?php } ?>
-                    
-                
-            </ul>
+
         </div>
     </main>
     <!--FINE MAIN-->

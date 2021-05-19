@@ -97,21 +97,19 @@
 
     <!--INIZIO MAIN-->
     <main>
-        <div class="testo">
-            
-        <?php foreach($domande as $titolo => $testo) { ?> 
 
-            <h3> <?php echo $titolo; ?> </h3>
+        <div class="testo"> 
 
-            <p>
-                <?php echo $testo ?>
-            </p>
+            <?php foreach($domande as $titolo => $testo) { ?> 
 
-        <?php } ?>
+                <h3> <?php echo $titolo; ?> </h3>
 
+                <p>
+                    <?php echo $testo ?>
+                </p>
 
-
-
+            <?php } ?>
+        </div>
 
     </main>
     <!--FINE MAIN-->

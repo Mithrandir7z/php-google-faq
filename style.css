@@ -55,6 +55,10 @@ main {
     margin-right: 350px;
 }
 
+.testo h3 {
+    font-size: 39px;
+}
+
 .testo p {
     margin-top: 20px;
 }

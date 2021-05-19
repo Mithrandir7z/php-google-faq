@@ -105,7 +105,7 @@
                 <h3> <?php echo $titolo; ?> </h3>
 
                 <p>
-                    <?php echo $testo ?>
+                    <?php echo $testo; ?>
                 </p>
 
             <?php } ?>
